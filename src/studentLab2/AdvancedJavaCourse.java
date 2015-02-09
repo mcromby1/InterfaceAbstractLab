@@ -5,10 +5,11 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
- * @version     1.00
+ * @author your name goes here
+ * @version 1.00
  */
-public class AdvancedJavaCourse implements Course{
+public class AdvancedJavaCourse implements Course {
+
     private String courseName;
     private String courseNumber;
     private double credits;
@@ -26,7 +27,7 @@ public class AdvancedJavaCourse implements Course{
     }
 
     public final void setCourseNumber(String courseNumber) {
-        if(courseNumber == null || courseNumber.length() == 0) {
+        if (courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null or empty string");
             System.exit(0);
@@ -39,7 +40,7 @@ public class AdvancedJavaCourse implements Course{
     }
 
     public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
+        if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
@@ -50,7 +51,7 @@ public class AdvancedJavaCourse implements Course{
     public int getNumOfStudents() {
         return numOfStudents;
     }
-    
+
     public int getMaxNumStudents() {
         return maxNumStudents;
     }
@@ -64,7 +65,7 @@ public class AdvancedJavaCourse implements Course{
     }
 
     public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
+        if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: prerequisites cannot be null"/* empty string"*/);
             System.exit(0);
@@ -77,26 +78,23 @@ public class AdvancedJavaCourse implements Course{
     }
 
     public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
+        if (courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null or empty string");
             System.exit(0);
         }
         this.courseName = courseName;
     }
-    
-    public void enrollInClass(int e){
+
+    public void enrollInClass(int e) {
         if (numOfStudents < maxNumStudents) {
             if ((maxNumStudents - numOfStudents) > e) {
                 numOfStudents += e;
-            }
-            else{
+            } else {
                 numOfStudents += (maxNumStudents - numOfStudents);
             }
         }
-        
-        
+
     }
 
-    
 }
