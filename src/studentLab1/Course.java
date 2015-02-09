@@ -28,7 +28,7 @@ public abstract class Course {
         this.sectionNumber = sectionNumber;
     }
     
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
     
@@ -41,7 +41,7 @@ public abstract class Course {
         this.courseNumber = courseNumber;
     }
     
-    public double getCredits() {
+    public final double getCredits() {
         return credits;
     }
 
@@ -54,7 +54,7 @@ public abstract class Course {
         this.credits = credits;
     }
 
-    public String getCourseName() {
+    public final String getCourseName() {
         return courseName;
     }
 
@@ -67,12 +67,12 @@ public abstract class Course {
         this.courseName = courseName;
     }
     
-     public String getCapitalizedCourseName() {
+     public final String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
 
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
@@ -85,11 +85,11 @@ public abstract class Course {
         this.prerequisites = prerequisites;
     }
 
-    public String getTeacher() {
+    public final String getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(String teacher) {
+    public final void setTeacher(String teacher) {
         if(teacher == null || teacher.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
@@ -98,11 +98,11 @@ public abstract class Course {
         this.teacher = teacher;
     }
 
-    public String getSectionNumber() {
+    public final String getSectionNumber() {
         return sectionNumber;
     }
 
-    public void setSectionNumber(String sectionNumber) {
+    public final void setSectionNumber(String sectionNumber) {
         if(sectionNumber == null || sectionNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
