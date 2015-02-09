@@ -17,21 +17,21 @@ public class StartUp {
             new IntroJavaCourse("Intro to Java with Objects", "20-350-234", "355"),
             new AdvancedJavaCourse("Design Patterns in Java", "30-400-345", "365")};
 
-        for (Course c:programmingCourses) {
+        for (Course c : programmingCourses) {
             if (c instanceof IntroToProgrammingCourse) {
-                ((IntroToProgrammingCourse) c).setTeacher("Mr. Howard");
-                ((IntroToProgrammingCourse) c).setCredits(2);
-                ((IntroToProgrammingCourse) c).setPrerequisites("");
+                c.setTeacher("Mr. Howard");
+                c.setCredits(2);
+                c.setPrerequisites("");
                 ((IntroToProgrammingCourse) c).setPrimatives(true);
             } else if (c instanceof IntroJavaCourse) {
-                ((IntroJavaCourse) c).setTeacher("Ms. Hollander");
-                ((IntroJavaCourse) c).setCredits(3);
-                ((IntroJavaCourse) c).setPrerequisites("10-300-123");
+                c.setTeacher("Ms. Hollander");
+                c.setCredits(3);
+                c.setPrerequisites("10-300-123");
                 ((IntroJavaCourse) c).setClasses(true);
             } else if (c instanceof AdvancedJavaCourse) {
-                ((AdvancedJavaCourse) c).setTeacher("Mr. Jones");
-                ((AdvancedJavaCourse) c).setCredits(4);
-                ((AdvancedJavaCourse) c).setPrerequisites("20-350-234");
+                c.setTeacher("Mr. Jones");
+                c.setCredits(4);
+                c.setPrerequisites("20-350-234");
             }
         }
 
