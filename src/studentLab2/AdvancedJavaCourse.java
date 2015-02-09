@@ -47,6 +47,18 @@ public class AdvancedJavaCourse implements Course{
         this.credits = credits;
     }
 
+    public int getNumOfStudents() {
+        return numOfStudents;
+    }
+    
+    public int getMaxNumStudents() {
+        return maxNumStudents;
+    }
+
+    public void setMaxNumStudents(int maxNumStudents) {
+        this.maxNumStudents = maxNumStudents;
+    }
+
     public String getPrerequisites() {
         return prerequisites;
     }
@@ -74,7 +86,7 @@ public class AdvancedJavaCourse implements Course{
     }
     
     public void enrollInClass(int e){
-        if (numOfStudents > maxNumStudents) {
+        if (numOfStudents < maxNumStudents) {
             if ((maxNumStudents - numOfStudents) > e) {
                 numOfStudents += e;
             }

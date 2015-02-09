@@ -47,6 +47,18 @@ public class IntroToProgrammingCourse implements Course {
         this.credits = credits;
     }
 
+    public int getNumOfStudents() {
+        return numOfStudents;
+    }
+
+    public int getMaxNumStudents() {
+        return maxNumStudents;
+    }
+
+    public void setMaxNumStudents(int maxNumStudents) {
+        this.maxNumStudents = maxNumStudents;
+    }
+
     public String getCourseName() {
         return courseName;
     }
@@ -61,11 +73,10 @@ public class IntroToProgrammingCourse implements Course {
     }
 
     public void enrollInClass(int e) {
-        if (numOfStudents > maxNumStudents) {
+        if (numOfStudents < maxNumStudents) {
             if ((maxNumStudents - numOfStudents) > e) {
                 numOfStudents += e;
-            }
-            else{
+            } else {
                 numOfStudents += (maxNumStudents - numOfStudents);
             }
         }

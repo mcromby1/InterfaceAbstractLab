@@ -38,7 +38,7 @@ public class IntroJavaCourse implements Course {
     public void setNumOfStudents(int numOfStudents) {
         this.numOfStudents = numOfStudents;
     }
-
+    
     public int getMaxNumStudents() {
         return maxNumStudents;
     }
@@ -72,7 +72,7 @@ public class IntroJavaCourse implements Course {
     }
 
     public void enrollInClass(int e) {
-        if (numOfStudents > maxNumStudents) {
+        if (numOfStudents < maxNumStudents) {
             if ((maxNumStudents - numOfStudents) > e) {
                 numOfStudents += e;
             }
