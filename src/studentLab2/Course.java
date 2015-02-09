@@ -7,7 +7,5 @@ package studentLab2;
 public interface Course {
     
     public abstract void enrollInClass(int e);
-    
-    
-    
+        
 }
