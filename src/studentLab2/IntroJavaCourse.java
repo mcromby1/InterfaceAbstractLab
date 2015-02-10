@@ -1,8 +1,5 @@
 package studentLab2;
 
-import lab1.*;
-import lab2.*;
-
 /**
  * Describe responsibilities here.
  *
@@ -33,10 +30,6 @@ public class IntroJavaCourse implements Course {
 
     public int getNumOfStudents() {
         return numOfStudents;
-    }
-
-    public void setNumOfStudents(int numOfStudents) {
-        this.numOfStudents = numOfStudents;
     }
 
     public int getMaxNumStudents() {
